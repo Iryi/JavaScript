@@ -1,22 +1,24 @@
 
+const adminLogin = prompt ('Пожалуйста, введите Ваш логин');
 
-let adminLogin = prompt('Пожалуйста, введите Ваш логин');
-let adminPassword;
-
-if (adminLogin === null) {
-  alert('Отменено пользователем')
-} else if (adminLogin !== 'admin') {
-  alert('Доступ запрещен')
-} if (adminLogin === 'admin') {
-  adminPassword = prompt('Пожалуйста, введите Ваш пароль');
-} if (adminPassword === null) {
-  alert('Отменено пользователем');
-} else if (adminPassword !== 'm4ngo1zh4ackz0r') {
-  alert('Доступ запрещен');
-} if (adminPassword === 'm4ngo1zh4ackz0r') {
-  alert('Добро пожаловать!')
+if (adminLogin === 'admin') {
+const adminLogin = 'admin';
+adminPassword = prompt ('Пожалуйста, введите Ваш пароль');
+} else{
+   if (adminLogin === null) {
+    alert ('Отменено пользователем!');
+      } else {
+  alert ('Доступ запрещен, неверный логин!'); 
+  }
 }
 
-const ADMIN_LOGIN = 'admin';
-const ADMIN_PASSWORD = 'm4ngo1zh4ackz0r';
-
+if (adminPassword === 'm4ngo1zh4ackz0r') {
+const adminPassword = 'm4ngo1zh4ackz0r';
+alert ('Добро пожаловать!');
+} else { 
+  if (adminPassword === null) {
+  alert ('Отменено пользователем!');
+    } else {
+  alert ('Доступ запрещен, неверный пароль!');
+  }
+} 
